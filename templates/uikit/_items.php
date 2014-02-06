@@ -15,22 +15,18 @@ defined('_JEXEC') or die('Restricted access');
 	<div class="uk-width-1-1">
 
 		<div class="uk-panel uk-panel-box">
-
+			<ul class="uk-grid">
 			<?php
 
 				// init vars
-				$i = 0;
 				$columns = $this->params->get('template.items_cols', 2);
 				reset($this->items);
 
 				// render rows
 				while ((list($key, $item) = each($this->items))) {
-					if ($i % $columns == 0) echo ($i > 0 ? '</div><div class="uk-grid" data-uk-grid-margin data-uk-grid-match>' : '<div class="uk-grid" data-uk-grid-margin data-uk-grid-match>');
-					echo '<div class="uk-width-medium-1-'.$columns.'">'.$this->partial('item', compact('item')).'</div>';
-					$i++;
+					echo '<li class="uk-width-medium-1-'.$columns.'">'.$this->partial('item', compact('item')).'</li>';
 				}
 				if (!empty($this->items)) {
-					echo '</div>';
 				}
 
 			?>
