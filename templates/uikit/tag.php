@@ -20,7 +20,7 @@ $css_class = $this->application->getGroup().'-'.$this->template->name;
 	<?php endif; ?>
 
 	<?php if ($this->params->get('template.show_title')) : ?>
-		<h1 class="uk-h1 <?php echo 'uk-text-'.$this->params->get('template.alignment'); ?>"><?php echo JText::_('Companies tagged with').': '.$this->tag; ?></h1>
+		<h1 class="uk-h1 <?php echo 'uk-text-'.$this->params->get('template.alignment'); ?>"><?php echo JText::_('Begrippen met tag').': '.$this->tag; ?></h1>
 	<?php endif; ?>
 
 	<?php
